@@ -1,8 +1,8 @@
 const CNV_SIZE = 800;
 
-let noiseScale = 0.05;
+let noiseScale = 0.04;
 
-let gridSize = 30;
+let gridSize = 40;
 
 let counter = 0;
 
@@ -25,7 +25,7 @@ function draw() {
 function drawLine(i, j) {
   const size = CNV_SIZE / gridSize;
   
-  const rotation = noise(i * noiseScale, j * noiseScale, counter/30) * Math.PI * 2;
+  const rotation = noise(i * noiseScale, j * noiseScale, counter/60) * Math.PI * 4;
   
   const x = i*(CNV_SIZE/gridSize) + (CNV_SIZE/gridSize)/2;
   const y = j*(CNV_SIZE/gridSize) + (CNV_SIZE/gridSize)/2;
